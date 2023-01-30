@@ -24,10 +24,10 @@ let current = 0;
 
 
 next.addEventListener('click', () => {
-    slides.style.backgroundImage = "url('../images/" + img[current] + "')";
+    slides.style.backgroundImage = "url('images/" + img[current] + "')"; // for localhost use "url('../images/" + img[current] + "')";
     current = current + 1 ;
     if(current > img.length) {
-        slides.style.backgroundImage = "url('../images/slide1.png')";
+        slides.style.backgroundImage = "url('images/slide1.png')"; // for localhost use "url('images/slide1.png')";
         current = 0;
     }
 });
@@ -35,23 +35,23 @@ next.addEventListener('click', () => {
 prev.addEventListener('click', () => {
     
     if(current == 0) {
-        slides.style.backgroundImage = "url('../images/slide1.png')";
+        slides.style.backgroundImage = "url('images/slide1.png')";  // for localhost use "url('images/slide1.png')";
         current = -1;
     } else if(current < 0 ) {
         current = img.length -1;
-        slides.style.backgroundImage = "url('../images/" + img[current] + "')";
+        slides.style.backgroundImage = "url('images/" + img[current] + "')"; // for localhost use "url('../images/" + img[current] + "')";
     }
     else {
         current = current - 1;
-        slides.style.backgroundImage = "url('../images/" + img[current] + "')";
+        slides.style.backgroundImage = "url('images/" + img[current] + "')"; // for localhost use "url('../images/" + img[current] + "')";
     }
 });
 
 setInterval(() =>{
-    slides.style.backgroundImage = "url('../images/" + img[current] + "')";
+    slides.style.backgroundImage = "url('images/" + img[current] + "')";   // for localhost use "url('../images/" + img[current] + "')";
     current = current + 1 ;
     if(current > img.length) {
-        slides.style.backgroundImage = "url('../images/slide1.png')";
+        slides.style.backgroundImage = "url('images/slide1.png')";  // for localhost use "url('images/slide1.png')";
         current = 0;
     }
 }, 4000)
